@@ -15,8 +15,16 @@ export class ParcheggiController
     {
         return this.getAll().length;
     }
-    newVeicolo(targa:string)
+    newVeicolo(targa:string):string
     {
-        this.db.parcheggio.veicoli.push(new Veicolo(targa));
+        if (!this.getAll().some(v=>v.targa==targa))
+        {
+            this.db.parcheggio.veicoli.push(new Veicolo(targa));
+            return ("Veicolo "+targa+" inserito");
+        }else
+        {
+            return ("Veicolo "+targa+" già esistente");
+        }
+       
     }
 }

@@ -27,10 +27,7 @@ export class MainMenuView
                 break;
             case 3:
                 let targa=rl.question('Inserire la targa:');
-                if(!controller.getAll().some(v=>v.targa===targa))
-                    controller.newVeicolo(targa);
-                else
-                    console.log('Veicolo già esistente');
+                console.log(controller.newVeicolo(targa));
                 break;
             case 9:
                 break;
