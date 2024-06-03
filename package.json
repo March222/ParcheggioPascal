@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/readline-sync": "^1.4.8",
     "git": "^0.1.5",
+    "readline-sync": "^1.4.10",
     "typescript": "^5.4.5"
   },
   "description": ""
