@@ -15,4 +15,8 @@ export class ParcheggiController
     {
         return this.getAll().length;
     }
+    newVeicolo(targa:string)
+    {
+        this.db.parcheggio.veicoli.push(new Veicolo(targa));
+    }
 }
